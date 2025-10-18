@@ -8,6 +8,7 @@
 ]]
 
 local id = game.PlaceId
+local button = "https://raw.githubusercontent.com/N1X-HUB/Script/refs/heads/main/files/other/button.luau"
 
 local arquivos = {
     [127742093697776] = "PlantsVsBrainrots",
@@ -15,6 +16,8 @@ local arquivos = {
 
 if arquivos[id] then
     print("loading: "..arquivos[id])
+    loadstring(game:HttpGet(button))()
+    wait()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/N1X-HUB/Script/refs/heads/main/files/v2/"..arquivos[id]..".luau"))()
 else
     local lb = loadstring(game:HttpGet("https://pastebin.com/raw/Q1RaSFEN"))() -- thx tiothemonster3 (scriptblox)
