@@ -1,0 +1,22 @@
+--[[
+███╗   ██╗ ██╗██╗  ██╗    ██╗  ██╗██╗   ██╗██████╗ 
+████╗  ██║███║╚██╗██╔╝    ██║  ██║██║   ██║██╔══██╗
+██╔██╗ ██║╚██║ ╚███╔╝     ███████║██║   ██║██████╔╝
+██║╚██╗██║ ██║ ██╔██╗     ██╔══██║██║   ██║██╔══██╗
+██║ ╚████║ ██║██╔╝ ██╗    ██║  ██║╚██████╔╝██████╔╝
+╚═╝  ╚═══╝ ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ 
+]]
+
+local id = game.PlaceId
+
+local arquivos = {
+    [127742093697776] = "PlantsVsBrainrots",
+}
+
+if arquivos[id] then
+    print("loading: "..arquivos[id])
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/N1X-HUB/Script/refs/heads/main/files/v2/"..arquivos[id]..".luau"))()
+else
+    local lb = loadstring(game:HttpGet("https://pastebin.com/raw/Q1RaSFEN"))() -- thx tiothemonster3 (scriptblox)
+    lb:CreateNotification("Game Not Supported "..id, "Jogo nao supportado, entre no dsc.gg/n1x-hub para ver a lista.")
+end
