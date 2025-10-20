@@ -12,6 +12,8 @@ local button = "https://raw.githubusercontent.com/N1X-HUB/Script/refs/heads/main
 
 local arquivos = {
     [127742093697776] = "PlantsVsBrainrots",
+    [96342491571673] = "StealABrainrot",
+    [109983668079237] = "StealABrainrot",
 }
 
 if arquivos[id] then
